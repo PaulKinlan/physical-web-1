@@ -1,14 +1,14 @@
 ##The Big Idea
-The Physical Web extends the same web we know and love into the physical world around us. This involves creating an open ecosystem where devices can broadcast a URL to any nearby smart display (phone, tablet, glasses, etc) can then see these URLs and offer them up to the user. It mirrors the basic behavior we have today with a search engine:
+The Physical Web extends the  web we know into the physical world around us. This involves creating an open ecosystem where smart devices can broadcast a URLs into the area around them. Any nearby display such as a phone or tablet can then see these URLs and offer them up to the user. It mirrors the basic behavior we have today with a search engine:
 
-* The user asks to see what's nearby (widget, notifications bar, etc)
+* The user requests a list of what's nearby
 * A ranked list of URLs is shown
 * The user picks one
 * The URL is opened in a full screen browser window.
 
 ![Example interaction](https://raw.githubusercontent.com/scottjenson/physical-web/master/images/example.png)
 
-Even though this is a fairly simple idea, it immediately generates lots of questions so let's get them out of the way:
+Even though this is a fairly simple idea, it immediately generates lots of questions:
 
 ##1. What's wrong with native apps?
 Nothing! Native apps are great but they're just not mathematically practical. If we believe in Moore's Law at all, there will be 1000s of these smart devices very soon and the native app approach breaks down. Are you really going to download an app when you pass a vending machine? Yahoo used to be a fixed hierarchy of links and finally just had give it up once the web exploded. The same thing will happen with smart hardware and apps.
@@ -20,7 +20,7 @@ Nothing! Native apps are great but they're just not mathematically practical. If
 A core principle of this system is **no proactive notifications**. The user will only see a list of nearby devices when they ask. If things were to buzz, it would generate immediate frustration. Push notifications, in general are too easily abused.
 
 ##3. Isn't there going to be a big list to choose from?
-At first, the nearby smart devices will be small but if we're successful, there will be many to choose from and that does raise an important UX issue. This is where ranking comes in. Today, we are perfectly happy typing "tennis" into a search engine and getting millions of results back, we trust that the first 10 are the best ones. The same applies here. The phone app can sort by both signal strength as well as personal preference. Clearly there is lots of work to be done here, we don't want to minimize this task but we feel that ranking can get us very far for the first few versions of this project.
+At first, the nearby smart devices will be small but if we're successful, there will be many to choose from and that does raise an important UX issue. This is where ranking comes in. Today, we are perfectly happy typing "tennis" into a search engine and getting millions of results back, we trust that the first 10 are the best ones. The same applies here. The phone agent can sort by both signal strength as well as personal preference and history. Clearly there is lots of work to be done here, we don't want to minimize this task but we feel that ranking can get us very far for the first few versions of this project.
 
 ##4. Is this secure?
 This first version is broadcasting URLs in the clear, there is no encryption so in it's current form, it's not yet secure. That is why we're initially suggesting this to be used in public spaces. However, that being said, there are many ways you could imaging making a URL secure, e.g. a rotating token that requires a login/cookie to decode. One of the huge values of URLs is that they are so flexible and encourage this further evolution.
@@ -39,7 +39,7 @@ This is meant to be an extension of the web so it should work on every platform.
 At this point, we have an android application and an AppEngine Server app that is open source. We hope this will be used and ported to other platforms.
 
 ##8. Can't the user be tracked?
-Our current URL broadcast method involves no interaction between that device and the user's phone. They can just receive the URLs much like they can see nearby wifi hotspots. This means a user can't be tracked simply by walking past a broadcasting device. This was very much by design to keep users silent passage untrackable. However, once the user does click on a URL, they are then known to that website. 
+Our current URL broadcast method involves a bluetooth broadcast from each device. The user's phone gathers this info without contacting the device so the user is invisible to the device. This means a user can't be tracked simply by walking past a broadcasting device. This was very much by design to keep users silent passage untrackable. However, once the user does click on a URL, they are then known to that website. 
 
 The search agent on the phone may keep track of which devices the user taps on so they can improve the ranking in the future. Of course, this too needs to be discussed and the possibly offered to the user as an option so they are in control of how this information is stored.
 
